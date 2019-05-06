@@ -11,10 +11,13 @@ const CircularDependencyPlugin = require("circular-dependency-plugin");
 const UnusedWebpackPlugin = require("unused-webpack-plugin");
 const _ = require("lodash");
 
+const MAX_CYCLES = 4;
+let numCyclesDetected = 0;
+
 const reduxLogMode =
   process.env.REDUX_LOGGING === "VERBOSE" ? "VERBOSE" : "SILENT";
 
-const editorHtmlTemplate = require("./src/html-template.js");
+const editorHtmlTemplate = require("./src/editor/html-template.js");
 const evalFrameHtmlTemplate = require("./src/eval-frame/html-template.js");
 
 const editorHtmlTemplateCompiler = _.template(editorHtmlTemplate);
@@ -31,7 +34,7 @@ let { EVAL_FRAME_ORIGIN } = process.env;
 const { USE_OPENIDC_AUTH } = process.env;
 const { IODIDE_PUBLIC } = process.env || false;
 
-const PYODIDE_VERSION = process.env.PYODIDE_VERSION || "0.10.0";
+const PYODIDE_VERSION = process.env.PYODIDE_VERSION || "0.12.0";
 process.env.PYODIDE_VERSION = PYODIDE_VERSION;
 
 const APP_VERSION_STRING = process.env.APP_VERSION_STRING || "dev";
@@ -60,7 +63,7 @@ module.exports = env => {
 
   return {
     entry: {
-      iodide: `${APP_DIR}/index.jsx`,
+      iodide: `${APP_DIR}/editor/index.jsx`,
       "iodide.eval-frame": `${APP_DIR}/eval-frame/index.jsx`,
       "server.home": `${APP_DIR}/server/index.jsx`
     },
@@ -107,14 +110,30 @@ module.exports = env => {
         }
       ]
     },
-    watchOptions: { poll: true },
+    watchOptions: { poll: true, ignored: /node_modules/ },
     plugins: [
       ...plugins,
       new CircularDependencyPlugin({
         // exclude detection of files based on a RegExp
         exclude: /a\.js|node_modules/,
-        failOnError: false, // FIXME should be true; we want it to fail
-        cwd: process.cwd()
+        failOnError: true, // FIXME should be true; we want it to fail
+        cwd: process.cwd(),
+        onStart() {
+          numCyclesDetected = 0;
+        },
+        onDetected({ paths, compilation }) {
+          numCyclesDetected += 1;
+          compilation.warnings.push(new Error(paths.join(" -> ")));
+        },
+        onEnd({ compilation }) {
+          if (numCyclesDetected > MAX_CYCLES) {
+            compilation.errors.push(
+              new Error(
+                `Detected ${numCyclesDetected} cycles which exceeds configured limit of ${MAX_CYCLES}`
+              )
+            );
+          }
+        }
       }),
       new UnusedWebpackPlugin({
         // Source directories

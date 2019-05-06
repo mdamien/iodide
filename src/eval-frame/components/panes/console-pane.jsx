@@ -10,7 +10,7 @@ import HistoryItem from "./history-item";
 import ConsoleInput from "./console/console-input";
 
 import EmptyPaneContents from "./empty-pane-contents";
-import OnboardingContent from "./onboarding-content";
+import OnboardingContent from "../../../shared/components/onboarding-content";
 
 const HelpIcon = styled(HelpOutline)`
   display: inline-block;
@@ -19,7 +19,8 @@ const HelpIcon = styled(HelpOutline)`
 
 export class ConsolePaneUnconnected extends React.Component {
   static propTypes = {
-    history: PropTypes.array
+    history: PropTypes.arrayOf(PropTypes.object),
+    paneVisible: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -48,7 +49,7 @@ export class ConsolePaneUnconnected extends React.Component {
       histContents = this.props.history.map(historyItem => (
         <HistoryItem
           historyItem={historyItem}
-          key={`history-${historyItem.lastRan}-${historyItem.historyId}`}
+          key={`history-${historyItem.historyId}`}
         />
       ));
     } else {

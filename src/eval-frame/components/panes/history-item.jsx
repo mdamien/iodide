@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 import AppMessage from "./console/app-message";
-import ValueRenderer from "../../../components/reps/value-renderer";
-import PreformattedTextItemsHandler from "../../../components/reps/preformatted-text-items-handler";
+import ValueRenderer from "../reps/value-renderer";
+import PreformattedTextItemsHandler from "../reps/preformatted-text-items-handler";
 
 import HistoryInputItem from "./console/history-input-item";
 import ConsoleMessage from "./console/console-message";
@@ -13,11 +13,11 @@ import { EVALUATION_RESULTS } from "../../actions/console-history-actions";
 
 export class HistoryItemUnconnected extends React.Component {
   static propTypes = {
+    content: PropTypes.string,
     level: PropTypes.string,
-    historyId: PropTypes.string.isRequired,
     historyType: PropTypes.string.isRequired,
-    lastRan: PropTypes.number.isRequired,
-    language: PropTypes.string
+    language: PropTypes.string,
+    valueToRender: PropTypes.any // eslint-disable-line react/forbid-prop-types
   };
 
   render() {
@@ -73,7 +73,6 @@ export function mapStateToProps(state, ownProps) {
     content: ownProps.historyItem.content,
     historyId: ownProps.historyItem.historyId,
     historyType: ownProps.historyItem.historyType,
-    lastRan: ownProps.historyItem.lastRan,
     level: ownProps.historyItem.level,
     language: ownProps.historyItem.language,
     valueToRender: EVALUATION_RESULTS[ownProps.historyItem.historyId]

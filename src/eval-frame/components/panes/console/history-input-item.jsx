@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "react-emotion";
-import DoubleChevronIcon from "../double-chevron-icon";
+import DoubleChevronIcon from "./double-chevron-icon";
 import BaseIcon from "./base-icon";
 import ConsoleContainer from "./console-container";
 import ConsoleGutter from "./console-gutter";
@@ -66,6 +66,10 @@ const HistoryInputItem = ({ language, children }) => {
   );
 };
 HistoryInputItem.propTypes = {
-  language: PropTypes.string.isRequired
+  language: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 };
 export default HistoryInputItem;

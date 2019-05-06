@@ -9,7 +9,7 @@ import { store } from "../../../store"; /* eslint-disable-line no-unused-vars */
 import HistoryItem from "../history-item";
 
 import { ConsolePaneUnconnected, mapStateToProps } from "../console-pane";
-import OnboardingContent from "../onboarding-content";
+import OnboardingContent from "../../../../shared/components/onboarding-content";
 
 describe("ConsolePaneUnconnected React component", () => {
   let props;
@@ -27,11 +27,12 @@ describe("ConsolePaneUnconnected React component", () => {
       history: [
         {
           cellId: 0,
-          lastRan: 1533078293981,
           content: "var a = 3"
         }
-      ]
+      ],
+      paneVisible: true
     };
+
     mountedPane = undefined;
   });
 
@@ -57,12 +58,10 @@ describe("ConsolePaneUnconnected React component", () => {
     props.history = [
       {
         cellId: 0,
-        lastRan: 1533078293981,
         content: "var a = 3"
       },
       {
         cellId: 1,
-        lastRan: 1533078293981,
         content: "var b = 3"
       }
     ];
@@ -83,7 +82,6 @@ describe("HistoryPane mapStateToProps", () => {
       history: [
         {
           cellId: 0,
-          lastRan: 1533078293981,
           content: "var a = 3"
         }
       ],

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "react-emotion";
 
 import {
@@ -13,9 +14,9 @@ import {
   SplashContentContainer,
   SingleSplash
 } from "./shared-components";
-import { loginToServer } from "../../../tools/login";
+import { loginToServer } from "../../../shared/utils/login";
 
-import LoginModal from "../../../shared/login-modal";
+import LoginModal from "../../../shared/components/login-modal";
 
 import DocsButton from "../docs-button";
 
@@ -28,7 +29,7 @@ const Spark = styled("span")`
   }
 `;
 
-const CurveObj = <Spark dangerouslySetInnerHTML={{ __html: CURVE }} /> // eslint-disable-line
+const CurveObj = <Spark dangerouslySetInnerHTML={{ __html: CURVE }} />; // eslint-disable-line
 
 const ThreePointsContainer = styled("div")`
   margin-top: 20px;
@@ -59,6 +60,9 @@ const BottomDivider = styled("hr")`
 `;
 
 export default class MarketingCopySplash extends React.Component {
+  static propTypes = {
+    loginCallback: PropTypes.func
+  };
   constructor(props) {
     super(props);
     this.state = { showLoginModal: false };

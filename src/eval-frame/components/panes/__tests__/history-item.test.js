@@ -5,8 +5,8 @@ import { HistoryItemUnconnected } from "../history-item";
 import HistoryInputItem from "../console/history-input-item";
 import AppMessage from "../console/app-message";
 import ConsoleMessage from "../console/console-message";
-import ValueRenderer from "../../../../components/reps/value-renderer";
-import PreformattedTextItemsHandler from "../../../../components/reps/preformatted-text-items-handler";
+import ValueRenderer from "../../reps/value-renderer";
+import PreformattedTextItemsHandler from "../../reps/preformatted-text-items-handler";
 
 describe("HistoryItem React component", () => {
   const historyItem = props => {
@@ -18,7 +18,6 @@ describe("HistoryItem React component", () => {
     const hist = historyItem({
       historyType: "APP_MESSAGE",
       historyId: "123456asdfg",
-      lastRan: +new Date(),
       content: "NOTEBOOK_SAVED"
     });
     expect(hist.find(AppMessage).length).toBe(1);
@@ -28,7 +27,6 @@ describe("HistoryItem React component", () => {
       historyType: "CONSOLE_MESSAGE",
       historyId: "123456asdfg",
       level: "WARN",
-      lastRan: +new Date(),
       content: "var x = 10"
     });
     expect(hist.find(ConsoleMessage).length).toBe(1);
@@ -37,7 +35,6 @@ describe("HistoryItem React component", () => {
     const hist = historyItem({
       historyType: "CONSOLE_INPUT",
       historyId: "123456asdfg",
-      lastRan: +new Date(),
       content: "var x = 10",
       language: "js"
     });
@@ -47,7 +44,6 @@ describe("HistoryItem React component", () => {
     const hist = historyItem({
       historyType: "CONSOLE_OUTPUT",
       historyId: "123456asdfg",
-      lastRan: +new Date(),
       valueToRender: 10403,
       level: "OUTPUT"
     });
@@ -59,7 +55,6 @@ describe("HistoryItem React component", () => {
     const hist = historyItem({
       historyType: "FETCH_CELL_INFO",
       historyId: "123456asdfg",
-      lastRan: +new Date(),
       valueToRender: [{ text: "a", id: "z" }, { text: "b", id: "y" }],
       level: "ERROR"
     });

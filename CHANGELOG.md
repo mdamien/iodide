@@ -1,4 +1,12 @@
-# (Unreleased; add upcoming change notes here)
+# 0.6.0 (2019-05-06)
+- introduces iodide.file API (see docs)
+- restore tabular data viewer for arrays of objects
+- add "TinyRep" components
+- implement `storybook` for visually testing rep components
+- only show notebooks with 10 or more edits on the server's index page list
+- fixes bug where fetch chunks with errors don't halt further evaluation
+- adds `arrayBuffer` type to fetch chunks (see docs)
+- fix bug where you couldn't save a notebook after forking it
 
 # 0.5.0 (2019-03-28)
 
