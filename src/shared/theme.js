@@ -36,23 +36,23 @@ THEME.header.left.minWidth = "300px";
 THEME.header.right.minWidth = THEME.header.left.minWidth;
 
 // sets the header background on both the notebook itself and the server bar.
-THEME.header.backgroundLeft = "#3f1b47";
-THEME.header.backgroundRight = "#1e0f21";
+THEME.header.backgroundLeft = "rgb(180, 222, 67)";
+THEME.header.backgroundRight = "rgb(250, 255, 35)";
 THEME.header.background = `linear-gradient(to right, ${
   THEME.header.backgroundLeft
 }, ${THEME.header.backgroundRight})`;
 
 // elementBackground is the background css property for
 // various contained elements such as featured notebooks.
-THEME.elementBackgroundLeft = "rgb(248, 243, 248)";
-THEME.elementBackgroundRight = "rgb(250, 248, 250)";
+THEME.elementBackgroundLeft = "rgb(180, 222, 67)";
+THEME.elementBackgroundRight = "red";
 THEME.elementBackground = `linear-gradient(to right, ${
   THEME.elementBackgroundLeft
 }, ${THEME.elementBackgroundRight})`;
 
 THEME.clientModal = {};
-THEME.clientModal.backgroundLeft = "#301934";
-THEME.clientModal.backgroundRight = "#563C5C";
+THEME.clientModal.backgroundLeft = "rgb(180, 222, 67)";
+THEME.clientModal.backgroundRight = "red";
 THEME.clientModal.background = `linear-gradient(to left, ${
   THEME.clientModal.backgroundLeft
 }, ${THEME.clientModal.backgroundRight})`;

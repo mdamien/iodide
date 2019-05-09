@@ -28,7 +28,7 @@ TrendingNotebooksPage.propTypes = {
 
 const LetsGetStarted = () => (
   <AttentionBlock>
-    <div>Welcome to Iodide. Shall we get started?</div>
+    <div>Welcome to linkage++. Shall we get started?</div>
     <NewNotebookButton />
   </AttentionBlock>
 );

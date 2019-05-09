@@ -2,7 +2,7 @@ const template = `<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title><%= NOTEBOOK_TITLE %> - iodide</title>
+<title><%= NOTEBOOK_TITLE %> - linkage++</title>
 <link rel="stylesheet" type="text/css" href="<%= APP_PATH_STRING %>iodide.<%= APP_VERSION_STRING %>.css">
 <base target="_blank" rel="noopener noreferrer">
 </head>

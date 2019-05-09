@@ -34,7 +34,7 @@ export default class IodideLogo extends React.Component {
             text-decoration: none;
           `}
         >
-          Iodide
+          linkage++
         </a>
       </IodideLogoContainer>
     );

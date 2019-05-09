@@ -35,7 +35,7 @@ def index(request):
         request,
         "index.html",
         {
-            "title": "Iodide",
+            "title": "linkage++",
             "page_data": {
                 "userInfo": user_info,
                 # this is horrible and will not scale
