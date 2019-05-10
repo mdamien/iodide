@@ -29,6 +29,44 @@ const Footer = ({ showIcon = true }) => (
   <FooterContainer showIcon={showIcon}>
     <FooterDiv>
       <p>
+        <div
+          className="col-sm-12 text-center"
+          style={{ "text-align": "center" }}
+        >
+          <div>
+            <a href="http://www.parisdescartes.fr/">
+              <img
+                src="https://linkage.fr/static/img/descartes.png"
+                height={40}
+              />
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://map5.mi.parisdescartes.fr/">
+              <img src="https://linkage.fr/static/img/map5.jpg" height={40} />
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.cnrs.fr/">
+              <img src="https://linkage.fr/static/img/cnrs.png" height={40} />
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.idfinnov.com/">
+              <img
+                src="https://linkage.fr/static/img/idfinnov.jpg"
+                height={40}
+              />
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://samm.univ-paris1.fr/">
+              <img src="https://linkage.fr/static/img/samm.png" height={40} />
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.univ-paris1.fr/">
+              <img src="https://linkage.fr/static/img/paris1.png" height={40} />
+            </a>
+          </div>
+        </div>
+      </p>
+      <p>
         iodide is brought to you by <a href="https://mozilla.org">Mozilla</a>.
       </p>
       {IODIDE_PUBLIC && (

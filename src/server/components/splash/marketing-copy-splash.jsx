@@ -125,8 +125,8 @@ export default class MarketingCopySplash extends React.Component {
             <PointTitle>
               Freely import your data and export the insights
             </PointTitle>
-            Choose the right language for the task with zero additional
-            installation.
+            Import from existing sources (Instagram, TripAdvisor,...) but also
+            import you own CSV and you're done.
           </Point>
           <Point>
             <PointTitle>Share and remix your work.</PointTitle>
