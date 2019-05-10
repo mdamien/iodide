@@ -31,9 +31,9 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("IODIDE_SERVER_DEBUG", default=False)
 
-SITE_URL = env("SERVER_URI", default="http://localhost:8000/")
+SITE_URL = "http://b03edfea.ngrok.io" # env("SERVER_URI", default="http://localhost:8000/")
 SITE_HOSTNAME = furl(SITE_URL).host
-ALLOWED_HOSTS = [SITE_HOSTNAME]
+ALLOWED_HOSTS = ['*']
 APP_VERSION_STRING = env.str("APP_VERSION_STRING", "dev")
 EVAL_FRAME_ORIGIN = env.str("EVAL_FRAME_ORIGIN", SITE_URL)
 

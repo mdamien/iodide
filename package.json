@@ -16,6 +16,7 @@
     "build": "webpack",
     "build-production": "webpack --env=production",
     "lint": "eslint src/ test/ --ext=.js --ext=.jsx -f unix",
+    "lint-and-fix": "eslint src/ test/ --ext=.js --ext=.jsx -f unix --fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

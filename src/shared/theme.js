@@ -45,14 +45,14 @@ THEME.header.background = `linear-gradient(to right, ${
 // elementBackground is the background css property for
 // various contained elements such as featured notebooks.
 THEME.elementBackgroundLeft = "rgb(180, 222, 67)";
-THEME.elementBackgroundRight = "red";
+THEME.elementBackgroundRight = "RebeccaPurple";
 THEME.elementBackground = `linear-gradient(to right, ${
   THEME.elementBackgroundLeft
 }, ${THEME.elementBackgroundRight})`;
 
 THEME.clientModal = {};
 THEME.clientModal.backgroundLeft = "rgb(180, 222, 67)";
-THEME.clientModal.backgroundRight = "red";
+THEME.clientModal.backgroundRight = "RebeccaPurple";
 THEME.clientModal.background = `linear-gradient(to left, ${
   THEME.clientModal.backgroundLeft
 }, ${THEME.clientModal.backgroundRight})`;

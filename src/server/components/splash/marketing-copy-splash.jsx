@@ -10,7 +10,6 @@ import {
 import {
   SplashTitle,
   HighlightedTitle,
-  SplashCopy,
   SplashContentContainer,
   SingleSplash
 } from "./shared-components";
@@ -97,16 +96,11 @@ export default class MarketingCopySplash extends React.Component {
           {/* <SplashImg width={100} src="https://camo.githubusercontent.com/b5dbd69518bd23f9eb2f9b722860e03d822fbcd6/68747470733a2f2f66696c65732e6769747465722e696d2f696f646964652d70726f6a6563742f696f646964652f7857314a2f696f646964652d737469636b65722d322e706e67" /> */}
           <SplashTitle>
             <HighlightedTitle>
-              Iodide<sub>α</sub>
+              linkage<sub>++</sub>
             </HighlightedTitle>{" "}
-            lets you do data science {CurveObj} entirely in your browser.
+            lets you find what&apos;s hidden in the data.
           </SplashTitle>
         </SingleSplash>
-        <SplashCopy>
-          {
-            "Create, share, collaborate, and reproduce powerful reports and visualizations with tools you already know. "
-          }
-        </SplashCopy>
         <ButtonGroup>
           <ContainedButton onClick={this.showLoginModal}>
             Sign Up For Free
@@ -122,21 +116,24 @@ export default class MarketingCopySplash extends React.Component {
         <ThreePointsContainer>
           <Point>
             <PointTitle>
-              Bring the power of the web to your data analysis.
+              Supported by the latest research on clustering
             </PointTitle>
             Directly import and utilize the best-in-class visualization and UI
             tools in Javascript.
           </Point>
           <Point>
             <PointTitle>
-              Combine Python, Javascript, Markdown, and CSS.
+              Freely import your data and export the insights
             </PointTitle>
             Choose the right language for the task with zero additional
             installation.
           </Point>
           <Point>
             <PointTitle>Share and remix your work.</PointTitle>
-            Your notebook should be as easy to share as a web page.
+            linkage++ is supported by Iodide, a project by Mozilla making it
+            easy to do data-science in the browser.
+            <br />
+            💙️ Mozilla
           </Point>
         </ThreePointsContainer>
         <BottomDivider />

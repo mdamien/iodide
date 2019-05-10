@@ -14,15 +14,15 @@ export const SplashTitle = styled("h1")`
 `;
 
 export const HighlightedTitle = styled("span")`
-  color: tomato;
+  color: RebeccaPurple;
 
   a {
-    color: tomato;
+    color: RebeccaPurple;
     text-decoration: none;
   }
 
   a:hover {
-    color: tomato;
+    color: RebeccaPurple;
     text-decoration: underline;
   }
 `;
