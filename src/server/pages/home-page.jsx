@@ -28,7 +28,6 @@ TrendingNotebooksPage.propTypes = {
 
 const LetsGetStarted = () => (
   <AttentionBlock>
-    <div>Let&apos;s get started !</div>
     <NewNotebookButton />
   </AttentionBlock>
 );
@@ -51,14 +50,14 @@ export default class HomePage extends React.Component {
             {!isLoggedIn && !IODIDE_PUBLIC && <MarketingCopySplash />}
             {!isLoggedIn && IODIDE_PUBLIC && <LetsGetStarted />}
             {isLoggedIn && <LoggedInSplash userInfo={this.props.userInfo} />}
-            <PageHeader>Try These Examples</PageHeader>
+            <PageHeader>Get started with one of these examples</PageHeader>
             <FeaturedNotebooks width={`${sharedProperties.pageWidth}px`} />
           </TopContainer>
           <BelowFoldContainer>
             {notebookList.length ? (
               <TrendingNotebooksPage notebookList={notebookList} />
             ) : (
-              <LetsGetStarted />
+              null // <LetsGetStarted />
             )}
           </BelowFoldContainer>
         </PageBody>

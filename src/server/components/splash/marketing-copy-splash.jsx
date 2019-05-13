@@ -101,18 +101,6 @@ export default class MarketingCopySplash extends React.Component {
             lets you find what&apos;s hidden in the data.
           </SplashTitle>
         </SingleSplash>
-        <ButtonGroup>
-          <ContainedButton onClick={this.showLoginModal}>
-            Sign Up For Free
-          </ContainedButton>
-          <LoginModal
-            visible={this.state.showLoginModal}
-            onClose={this.hideLoginModal}
-            login={this.login}
-          />
-          <OutlineButton href="/tryit/">Try It Out</OutlineButton>
-          <DocsButton />
-        </ButtonGroup>
         <ThreePointsContainer>
           <Point>
             <PointTitle>
