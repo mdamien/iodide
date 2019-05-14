@@ -29,6 +29,7 @@ wait_for db 5432
 case $1 in
   dev)
     python manage.py migrate --noinput
+    # IDEA: allowed hosts with 0.0.0.0:8000 or localhost:8000 here
     exec python manage.py runserver 0.0.0.0:${PORT}
     ;;
   *)
