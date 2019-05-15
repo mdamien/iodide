@@ -28,10 +28,10 @@ const FooterDiv = styled("div")`
 const Footer = ({ showIcon = true }) => (
   <FooterContainer showIcon={showIcon}>
     <FooterDiv>
-      <p>
+      <div>
         <div
           className="col-sm-12 text-center"
-          style={{ "text-align": "center" }}
+          style={{ "textAlign": "center" }}
         >
           <div>
             <a href="http://www.parisdescartes.fr/">
@@ -99,7 +99,7 @@ const Footer = ({ showIcon = true }) => (
             </a>
           </div>
         </div>
-      </p>
+      </div>
       <p>
         iodide is brought to you by <a href="https://mozilla.org">Mozilla</a>.
       </p>

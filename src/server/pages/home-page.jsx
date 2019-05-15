@@ -56,9 +56,8 @@ export default class HomePage extends React.Component {
           <BelowFoldContainer>
             {notebookList.length ? (
               <TrendingNotebooksPage notebookList={notebookList} />
-            ) : (
-              null // <LetsGetStarted />
-            )}
+            ) : null // <LetsGetStarted />
+            }
           </BelowFoldContainer>
         </PageBody>
       </div>
