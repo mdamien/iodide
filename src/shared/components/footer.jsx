@@ -29,10 +29,7 @@ const Footer = ({ showIcon = true }) => (
   <FooterContainer showIcon={showIcon}>
     <FooterDiv>
       <div>
-        <div
-          className="col-sm-12 text-center"
-          style={{ "textAlign": "center" }}
-        >
+        <div className="col-sm-12 text-center" style={{ textAlign: "center" }}>
           <div>
             <a href="http://www.parisdescartes.fr/">
               <img
