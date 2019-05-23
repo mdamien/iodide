@@ -90,7 +90,7 @@ export default class OnboardingContent extends React.Component {
   render() {
     return (
       <OnboardingContentContainer fainter={this.props.fainter}>
-        <OnboardingHeader>Welcome to linkage++!</OnboardingHeader>
+        <OnboardingHeader>Welcome to Topix!</OnboardingHeader>
         <OnboardingLede>
           {this.props.lede || "Here are three ways to get started."}
         </OnboardingLede>

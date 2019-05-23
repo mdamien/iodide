@@ -14,7 +14,7 @@ const FeaturedNotebooks = ({ width }) => (
     <NotebookDisplayItem
       title="Instagram"
       description="What do people talk about in your city ?"
-      href="notebooks/2/"
+      href="notebooks/2/?viewMode=report"
       imageSource="https://framapic.org/Cjku6SwQW7KD/igZG4dcWc5kf.png"
     />
     <NotebookDisplayItem

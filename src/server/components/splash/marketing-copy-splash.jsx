@@ -77,7 +77,7 @@ export default class MarketingCopySplash extends React.Component {
           {/* <SplashImg width={100} src="https://camo.githubusercontent.com/b5dbd69518bd23f9eb2f9b722860e03d822fbcd6/68747470733a2f2f66696c65732e6769747465722e696d2f696f646964652d70726f6a6563742f696f646964652f7857314a2f696f646964652d737469636b65722d322e706e67" /> */}
           <SplashTitle>
             <HighlightedTitle>
-              linkage<sub>++</sub>
+              Topix
             </HighlightedTitle>{" "}
             lets you find what&apos;s hidden in the data.
           </SplashTitle>
@@ -99,7 +99,7 @@ export default class MarketingCopySplash extends React.Component {
           </Point>
           <Point>
             <PointTitle>Share and remix your work.</PointTitle>
-            linkage++ is supported by Iodide, a project by Mozilla making it
+            Topix is supported by Iodide, a project by Mozilla making it
             easy to do data-science in the browser.
             <br />
             💙️ Mozilla
